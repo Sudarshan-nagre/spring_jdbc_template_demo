@@ -28,4 +28,10 @@ public class StudentDAO {
 		String query = "delete from student where rollNo='" + st.getRollNo() + "' ";
 		return jdbcTemplate.update(query);
 	}
+	public List<Map<String, Object>> getStudents() {
+		String q = "select * from student";
+		List<Map<String, Object>> ll =  jdbcTemplate.queryForList(q);
+		
+		return ll;
+	}
 }
