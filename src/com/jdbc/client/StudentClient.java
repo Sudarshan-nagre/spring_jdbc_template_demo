@@ -20,5 +20,12 @@ public class StudentClient {
 		StudentDAO dao = (StudentDAO) ctx.getBean("sdao");
 		dao.saveStudent(new Student(10, "Sudarshan", "Pune"));
 		System.out.println("Done !!");
+
+		//view records
+		/*
+		dao.getStudents().forEach(s -> System.out.println
+				("RollNo : " + s.get("rollNo")+"\t Name : "+s.get("name")+
+						"\t Address : "+s.get("address")));
+		*/
 	}
 }
